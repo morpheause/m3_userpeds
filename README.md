@@ -27,11 +27,11 @@ simple spawn ped script for fivem
 - if you want to be born with the given ped, example add this code to esx_kashacters client.lua
 
 
+
 `RegisterNetEvent('kashactersC:SpawnCharacter')  
 AddEventHandler('kashactersC:SpawnCharacter', function(spawn, isnew)  
     TriggerServerEvent('es:firstJoinProper')  
     TriggerEvent('es:allowedToSpawn')  
-
     SetTimecycleModifier('default')  
     pos = spawn -- local  
     spawn = spawn  
