@@ -25,6 +25,8 @@ simple spawn ped script for fivem
 - for add ped --> /pedver [id] [pedmodel]
 - for delete ped --> /pedsil [id]
 - if you want to be born with the given ped, example add this code to esx_kashacters client.lua
+
+
 `RegisterNetEvent('kashactersC:SpawnCharacter')  
 AddEventHandler('kashactersC:SpawnCharacter', function(spawn, isnew)  
     TriggerServerEvent('es:firstJoinProper')  
