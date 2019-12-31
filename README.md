@@ -39,7 +39,6 @@ AddEventHandler('kashactersC:SpawnCharacter', function(spawn, isnew)
     DoScreenFadeIn(500)  
     Citizen.Wait(500)  
     cam2 = CreateCamWithParams("DEFAULT_SCRIPTED_CAMERA", -1355.93,-1487.78,520.75, 300.00,0.00,0.00, 100.00, false, 0)  
-
     if isnew then  
         TriggerEvent('jsfour-register:open')  
     else  
