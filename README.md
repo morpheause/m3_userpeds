@@ -31,7 +31,6 @@ simple spawn ped script for fivem
 		while not playerLoaded do
 			Citizen.Wait(100)
 		end
-
 		if firstSpawn then
 			ESX.TriggerServerCallback('esx_skin:getPlayerSkin', function(skin, jobSkin)
 				if skin == nil then
@@ -42,7 +41,6 @@ simple spawn ped script for fivem
 					TriggerEvent('skinchanger:loadSkin', skin)
 				end
 			end)
-
 			firstSpawn = false
 		end
 	end)
