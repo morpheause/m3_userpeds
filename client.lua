@@ -24,6 +24,12 @@ AddEventHandler('m3:userpeds:spawnPed', function()
 				SetPlayerModel(PlayerId(), Model)
 				
 				SetModelAsNoLongerNeeded(Model)
+
+				Citizen.Wait(100)
+
+				TriggerEvent('esx_skin:getLastSkin', function(skin)
+					TriggerEvent('skinchanger:loadSkin', skin)
+				end)
 			end
 		end
 	end)
