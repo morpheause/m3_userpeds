@@ -28,9 +28,6 @@ simple spawn ped script for fivem
 
 `
 TriggerEvent('m3:userpeds:spawnPed')
-TriggerEvent('esx_skin:getLastSkin', function(skin)
-	TriggerEvent('skinchanger:loadSkin', skin)
-end)
 `
 
 
