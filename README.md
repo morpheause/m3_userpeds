@@ -37,7 +37,7 @@ AddEventHandler('playerSpawned', function()
 				if skin == nil then
 					TriggerEvent('skinchanger:loadSkin', {sex = 0}, OpenSaveableMenu)
 				else
-					TriggerEvent("m3:userpeds:spawnPed") -- ped spawn
+					TriggerEvent("m3:userpeds:spawnPed")
 					Citizen.Wait(10)
 					TriggerEvent('skinchanger:loadSkin', skin)
 				end
