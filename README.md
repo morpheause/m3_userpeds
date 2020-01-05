@@ -24,9 +24,29 @@ simple spawn ped script for fivem
 
 - for add ped --> /pedver [id] [pedmodel]
 - for delete ped --> /pedsil [id]
-- if you want to be born with the given ped, example add this code to esx_kashacters client.lua
+- if you want to be born with the given ped, change the function in esx_skin/client/main.lua
 
-`TriggerEvent('m3:userpeds:spawnPed')`
+`AddEventHandler('playerSpawned', function()
+	Citizen.CreateThread(function()
+		while not playerLoaded do
+			Citizen.Wait(100)
+		end
+
+		if firstSpawn then
+			ESX.TriggerServerCallback('esx_skin:getPlayerSkin', function(skin, jobSkin)
+				if skin == nil then
+					TriggerEvent('skinchanger:loadSkin', {sex = 0}, OpenSaveableMenu)
+				else
+					TriggerEvent("m3:userpeds:spawnPed") -- ped spawn
+					Citizen.Wait(10)
+					TriggerEvent('skinchanger:loadSkin', skin)
+				end
+			end)
+
+			firstSpawn = false
+		end
+	end)
+end)`
 
 
 # Contact
