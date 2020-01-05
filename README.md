@@ -26,7 +26,8 @@ simple spawn ped script for fivem
 - for delete ped --> /pedsil [id]
 - if you want to be born with the given ped, change the function in esx_skin/client/main.lua
 
-`AddEventHandler('playerSpawned', function()
+`
+AddEventHandler('playerSpawned', function()
 	Citizen.CreateThread(function()
 		while not playerLoaded do
 			Citizen.Wait(100)
@@ -44,7 +45,8 @@ simple spawn ped script for fivem
 			firstSpawn = false
 		end
 	end)
-end)`
+end)
+`
 
 
 # Contact
