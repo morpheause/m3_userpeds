@@ -27,7 +27,7 @@ AddEventHandler('m3:userpeds:spawnPed', function()
 
 				Citizen.Wait(100)
 
-				TriggerEvent('esx_skin:getLastSkin', function(skin)
+				ESX.TriggerServerCallback('esx_skin:getPlayerSkin', function(skin, jobSkin, height)
 					TriggerEvent('skinchanger:loadSkin', skin)
 				end)
 			end
